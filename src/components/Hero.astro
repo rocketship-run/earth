@@ -1,0 +1,28 @@
+---
+interface Props {
+	title: string;
+	body: string;
+}
+
+const { heading, description } = Astro.props;
+import { Image } from "astro:assets";
+import heroImage from "../images/hero.png";
+---
+
+<section class="flex max-w-6xl px-10 h-screen -mt-20 mx-auto items-center">
+
+    <div class="w-1/2 ">
+        <h1 class="text-4xl font-serif mb-4 text-slate-600">
+            {heading}
+        </h1>
+        <p class="font-serif text-xl text-slate-600"> 
+            {description}
+        </p>
+    
+    </div>
+    <Image class="w-1/2" src={heroImage} alt="ai generated watercolor pastel image of globe showing Asia" />
+</section>
+<style>
+	
+    
+</style>
